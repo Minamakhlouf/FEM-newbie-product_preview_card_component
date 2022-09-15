@@ -1,0 +1,142 @@
+/* Random Notes */ 
+
+/* HSL 
+- Stands for Hue, Saturation, Lightness 
+- Hue = Color. There is a color wheel that goes all the way to 360 
+- Saturation = How much grey you want the color. 0% is full grey
+- Lightness = How much black and white you want. 100% is full white, 0% is full black. 
+*/ 
+
+/* Think about things in terms of aspect ratio. Put another way, think of elements as 
+shapes that are on the page */ 
+
+/* Start of CSS */ 
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    height: 100vh; 
+    background-color: hsl(30, 38%, 92%);
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    background-image: url("images/image-product-desktop.jpg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    min-width: 50%; 
+}
+
+section {
+    display: flex; 
+    width: 540px; 
+    border-radius: 20px; 
+    border: 1px solid black; 
+    overflow: hidden; 
+}
+
+section > div {
+    width: 100%; 
+}
+
+.subheading {
+    color: hsl(228, 12%, 48%); 
+    letter-spacing: 3px;
+}
+
+.text-buttons {
+    padding: 20px 20px; 
+    flex-grow: 0; 
+    background: white; 
+}
+
+.paragraph {
+    line-height: 1.5; 
+    font-size: 14px; 
+    margin-bottom: 15px; 
+    color: hsl(212, 21%, 14%); 
+    font-family: "Montserrat"; 
+}
+
+h1 {
+    margin: 15px 0; 
+    font-size: 2rem;  
+    line-height: 1; 
+    font-family: "Fraunces"; 
+}
+
+button {
+    width: 100%; 
+    padding: 12px 0; 
+    border-radius: 10px; 
+    background: hsl(158, 36%, 37%); 
+    color: hsl(0, 0%, 100%); 
+    border: none; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat"; 
+    cursor: pointer; 
+    transition: all 500ms ease-in-out; 
+}
+
+button:hover {
+    background: hsl(158, 36%, 20%); 
+}
+
+.price {
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 15px; 
+}
+
+.price-now {
+    font-size: 2rem; 
+    margin-right: 20px; 
+    color: hsl(158, 36%, 37%); 
+    font-family: "Fraunces"; 
+}
+
+.price-later {
+    text-decoration: line-through; 
+    color: hsl(228, 12%, 48%); 
+}
+
+button img {
+    margin-right: 5px; 
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 30px 20px; 
+    }
+    section {
+        flex-direction: column;
+        height: 100%; 
+        width: 335px; 
+    }
+    .image {
+        height: 50%; 
+        background-image: url("images/image-product-mobile.jpg"); 
+        background-position: center center; 
+    }
+    h1 {
+        margin: 20px 0; 
+    }
+    button {
+        padding: 15px; 
+    }
+    .subheading {
+        font-size: 14px; 
+    }
+    .paragraph {
+        font-size: 14px; 
+    }
+}
